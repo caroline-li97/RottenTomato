@@ -9,6 +9,8 @@
 #   end
 
 # Seed the RottenPotatoes DB with some movies.
+Movie.destroy_all
+
 more_movies = [
   {:title => 'My Neighbor Totoro', :rating => 'G',
     :release_date => '16-Apr-1988'},
@@ -19,7 +21,13 @@ more_movies = [
   {:title => 'Nomadland', :rating => 'R',
     :release_date => '19-Feb-2021'},
   {:title => 'CODA', :rating => 'PG-13',
-    :release_date => '13-Aug-2021'}
+    :release_date => '13-Aug-2021'},
+  {:title => 'Everything Everywhere All at Once', :rating => 'R',
+    :release_date => '25-Mar-2022'},
+  {:title => 'Monster', :rating => 'PG-13',
+    :release_date => '17-May-2023'},
+  {:title => 'Alien', :rating => 'R',
+    :release_date => '25-May-1979'}
 ]
 
 more_movies.each do |movie|
