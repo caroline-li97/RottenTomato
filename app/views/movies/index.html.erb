@@ -1,3 +1,17 @@
+<style>
+table, th, td {
+    border: 1px solid black;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+</style>
+
 <p style="color: green"><%= notice %></p>
 
 <% content_for :title, "Movies" %>
@@ -5,12 +19,19 @@
 <h1>Movies</h1>
 
 <div id="movies">
+<table>
+  <thead>
+   <tr>
+    <th><strong>Title</strong></th>
+    <th><strong>Rating</strong></th>
+    <th><strong>Release date</strong></th>
+   </tr>
+  </thead>
   <% @movies.each do |movie| %>
     <%= render movie %>
-    <p>
-      <%= link_to "Show this movie", movie %>
-    </p>
   <% end %>
+</table>
 </div>
+
 
 <%= link_to "New movie", new_movie_path %>

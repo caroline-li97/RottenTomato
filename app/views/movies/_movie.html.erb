@@ -1,29 +1,12 @@
-<!DOCTYPE html>
-<html>
-<style>
-table, th, td {
-  border: 1px solid black;
-}
-</style>
 <div id="<%= dom_id movie %>">
-<body>
 <table>
-  <p>
+  <tbody>
    <tr>
-    <th><strong>Title:</strong></th>
-    <th><strong>Rating:</strong></th>
-    <th><strong>Release date:</strong></th>
-    <th><strong>Description:</strong></th>
-   </tr>
-  </p>
-   <tr>
-	<td><%= movie.title %></td>
+	  <td><%= movie.title %></td>
     <td><%= movie.rating %></td>
-    <td><%= movie.description %></td>
     <td><%= movie.release_date %></td>
+    <td><%= link_to "Show this movie", movie %></td>
    </tr>
-  </p>
+  </tbody>
 </table>
-</body>
 </div>
-</html>

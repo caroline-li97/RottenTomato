@@ -20,4 +20,10 @@
   <body>
     <%= yield %>
   </body>
+
+  <footer>
+    <%= link_to 'Sort by Title', movies_path(sort_by: 'title', order: params[:order] == 'ASC' ? 'DESC' : 'ASC') %>
+    <%= link_to 'Rating', movies_path(sort_by: 'rating', order: params[:order] == 'ASC' ? 'DESC' : 'ASC') %>
+    <%= link_to 'Release Date', movies_path(sort_by: 'release_date', order: params[:order] == 'ASC' ? 'DESC' : 'ASC') %>
+  </footer>
 </html>
