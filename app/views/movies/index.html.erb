@@ -27,9 +27,11 @@ th, td {
     <th><strong>Release date</strong></th>
    </tr>
   </thead>
-  <% @movies.each do |movie| %>
-    <%= render movie %>
-  <% end %>
+  <tbody>
+    <% @movies.each do |movie| %>
+      <%= render movie %>
+    <% end %>
+  </tbody>
 </table>
 </div>
 
