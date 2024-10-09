@@ -22,9 +22,21 @@ th, td {
 <table>
   <thead>
    <tr>
-    <th><strong>Title</strong></th>
-    <th><strong>Rating</strong></th>
-    <th><strong>Release date</strong></th>
+    <th style="<%= sorting_color('title') %>">
+      <strong>Title</strong>
+      <%= link_to 'Sort', movies_path(sort_by: 'title', order: params[:order] == 'ASC' ? 'DESC' : 'ASC') %>
+      <%= sorting_icon('title') %>
+    </th> 
+    <th style="<%= sorting_color('rating') %>">
+      <strong>Rating</strong>
+      <%= link_to 'Sort', movies_path(sort_by: 'rating', order: params[:order] == 'ASC' ? 'DESC' : 'ASC') %>
+      <%= sorting_icon('rating') %>
+    </th>
+    <th style="<%= sorting_color('release_date') %>">
+      <strong>Release date</strong>
+      <%= link_to 'Sort', movies_path(sort_by: 'release_date', order: params[:order] == 'ASC' ? 'DESC' : 'ASC') %>
+      <%= sorting_icon('release_date') %>
+    </th>
    </tr>
   </thead>
   <tbody>
